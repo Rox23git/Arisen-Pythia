@@ -6,4 +6,4 @@
    - Numero (risposta)
    
 1.2 Db
-   
+   - Salvare le pic come link
