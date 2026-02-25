@@ -1,14 +1,22 @@
+Linguaggio: Python.
+
+Libreria Discord: discord.py o disnake.
+
+Database: PostgreSQL.
+
+OCR: Tesseract OCR o Google Vision API.
+
 1. Bot
    - Creare applicazione sul Discord Developer Portal
    - Attivare i Message Content Intents (per leggere messaggi e foto)
    - Generare il token del bot
-1.1 OCR
-1.2 Tracking temporale
-      import datetime
-      current_week = datetime.date.today().isocalendar()[1]
-      current_hour = datetime.datetime.utcnow().hour
-1.3 Gestione dei gruppi
-1.4 Interrogazione dei dati (per permettere agli utenti di ricercare le Amities desiderate)
+   - OCR
+   - Tracking temporale <br />
+      import datetime <br />
+      current_week = datetime.date.today().isocalendar()[1] <br />
+      current_hour = datetime.datetime.utcnow().hour <br />
+   - Gestione dei gruppi
+   - Interrogazione dei dati (per permettere agli utenti di ricercare le Amities desiderate)
    
 2. Db
    - Salvare le pic come link
@@ -21,12 +29,4 @@
    - User_ID: chi ha inserito il dato (Discord handle)
 
 
-Linguaggio: Python.
 
-Libreria Discord: discord.py o disnake.
-
-Database: PostgreSQL.
-
-OCR: Tesseract OCR o Google Vision API.
-
-Hosting: Railway, Heroku o un VPS (come DigitalOcean).
