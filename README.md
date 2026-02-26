@@ -7,9 +7,9 @@ Database: PostgreSQL.
 OCR: Tesseract OCR o Google Vision API.
 
 1. Bot
-   ~~- Creare applicazione sul Discord Developer Portal~~
-   ~~- Attivare i Message Content Intents (per leggere messaggi e foto)~~
-   ~~- Generare il token del bot~~
+   -  ~~Creare applicazione sul Discord Developer Portal~~
+   - ~~Attivare i Message Content Intents (per leggere messaggi e foto)~~
+   - ~~Generare il token del bot~~
    - OCR
    - Tracking temporale <br />
       import datetime <br />
