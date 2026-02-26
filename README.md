@@ -31,10 +31,10 @@ OCR: Tesseract OCR o Google Vision API.
 Tabella users: <br />
 <br />
 CREATE TABLE users ( <br />
-    discord_id BIGINT PRIMARY KEY,     -- L'ID univoco dell'utente Discord <br />
-    orna_group INTEGER NOT NULL,      -- Il gruppo/seed (es. 1, 2, 3...) <br />
-    username TEXT,                    -- Opzionale, per rendere i log leggibili <br />
-    updated_at TIMESTAMP DEFAULT NOW() -- Ultima volta che l'utente ha cambiato gruppo <br />
+    discord_id BIGINT PRIMARY KEY,       -- L'ID univoco dell'utente Discord <br />
+    orna_group INTEGER NOT NULL,         -- Il gruppo/seed (es. 1, 2, 3...) <br />
+    username TEXT,                       -- Opzionale, per rendere i log leggibili <br />
+    updated_at TIMESTAMP DEFAULT NOW()   -- Ultima volta che l'utente ha cambiato gruppo <br />
 ); <br />
 
 Tabella amity logs: <br />
@@ -50,9 +50,6 @@ CREATE TABLE amity_logs ( <br />
     amity_description TEXT NOT NULL,   -- L'effetto dell'Amity (es. "+10% HP") <br />
     discovered_by BIGINT REFERENCES users(discord_id), -- Chi l'ha trovata <br />
     created_at TIMESTAMP DEFAULT NOW(), <br />
-    
-    -- Vincolo di unicità: evita che la stessa risposta nello stesso slot
-    -- venga salvata due volte per lo stesso gruppo. 
-    UNIQUE(week_number, year, hour_utc, orna_group, node, answer)
-); <br />
+    UNIQUE(week_number, year, hour_utc, orna_group, node, answer) -- Vincolo di unicità: evita che la stessa risposta nello stesso slot venga salvata due volte per lo stesso gruppo. <br />
+   ); <br />
 
